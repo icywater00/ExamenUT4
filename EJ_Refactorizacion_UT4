@@ -49,6 +49,22 @@ class utilidades:
         for l in lista:
             print(f"* {l}")
 
+def crar_receta():
+    nombre1 = input("Nombre de la receta: ")
+    ingredientes1 = []
+    print("Introduce los ingredientes (escribe 'fin' para terminar)")
+    while True:
+        ingredientes = input("- ")
+        if ingredientes.lower() == "fin":
+            break
+        ingredientes1.append(ingredientes)
+    pasos1 = []
+    print("Introduce los pasos(escribe 'fin' para terminar):")
+    while True:
+        paso = input("- ")
+        if paso.lower() == "fin":
+            break
+
 # Función principal
 def principal():
     receta1 = recetaVegetariana("Ensalada César", ["lechuga", "queso", "pan tostado", "salsa"], ["Lavar", "Mezclar", "Servir"])
