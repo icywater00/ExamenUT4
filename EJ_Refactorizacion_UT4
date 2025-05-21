@@ -17,8 +17,8 @@ class recetaVegetariana(receta):
     def mostrar(self):
         print(f"Receta vegetariana: {self.nombre}")
         print("Ingredientes:")
-        for ing in self.ingredientes:
-            print(f"- {ing}")
+        for ingredientes in self.ingredientes:
+            print(f"- {ingredientes}")
         print("Pasos:")
         for paso in self.pasos:
             print(f"{paso}")
@@ -29,8 +29,8 @@ class recetaNoVegetariana(receta):
     def mostrar(self):
         print(f"Receta NO vegetariana: {self.nombre}")
         print("Ingredientes:")
-        for ing in self.ingredientes:
-            print(f"- {ing}")
+        for ingredientes in self.ingredientes:
+            print(f"- {ingredientes}")
         print("Pasos:")
         for paso in self.pasos:
             print(f"{paso}")
@@ -61,12 +61,18 @@ def principal():
 
     # Código duplicado para mostrar ingredientes
     print("Ingredientes de Ensalada César:")
-    for ing in receta1.ingredientes:
-        print(f"* {ing}")
+    for ingredientes in receta1.ingredientes:
+        print(f"* {ingredientes}")
     
     print("Ingredientes de Pollo al horno:")
-    for ing in receta2.ingredientes:
-        print(f"* {ing}")
+    for ingredientes in receta2.ingredientes:
+        print(f"* {ingredientes}")
+
+
+# Ejecutar el programa
+if __name__ == "__main__":
+    principal()
+
 
 
 # Ejecutar el programa
