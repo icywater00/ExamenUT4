@@ -64,25 +64,23 @@ def crar_receta():
         paso = input("- ")
         if paso.lower() == "fin":
             break
+        pasos1.append(paso)
+    return nombre1, ingredientes1, pasos
 
 # Función principal
 def principal():
-    receta1 = recetaVegetariana("Ensalada César", ["lechuga", "queso", "pan tostado", "salsa"], ["Lavar", "Mezclar", "Servir"])
-    receta2 = recetaNoVegetariana("Pollo al horno", ["pollo", "patatas", "ajo", "aceite"], ["Preparar", "Hornear", "Servir"])
-    
-    # Duplicación de código al imprimir
-    print("== Mostrar recetas ==")
-    utilidades.imprimir_receta(receta1)
-    utilidades.imprimir_receta(receta2)
+  
+if tipo == "vegetariana":
+    print("== Crear receta 1 (vegetariana) ==")
+    apta_para_veganos = input("Indica si es apta para veganos:")
+    receta1 = recetaVegetariana (nombre1, ingredientes1, pasos1, apta_para_veganos)
+elif tipo == "carnivora":
+    print("== Crear receta 2 (con carne) ==")
+    tipo_de_carne = input ("Indica que tipo de carne utiliza esta receta")
+    receta2 = recetaNoVegetariana(nombre1, ingredientes1, pasos1, tipo_de_carne)
+else:
+    print("La receta introducida no es correcta")
 
-    # Código duplicado para mostrar ingredientes
-    print("Ingredientes de Ensalada César:")
-    for ingredientes in receta1.ingredientes:
-        print(f"* {ingredientes}")
-    
-    print("Ingredientes de Pollo al horno:")
-    for ingredientes in receta2.ingredientes:
-        print(f"* {ingredientes}")
 
 
 # Ejecutar el programa
